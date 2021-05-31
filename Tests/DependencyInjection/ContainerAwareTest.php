@@ -4,7 +4,7 @@ namespace Prokl\TaskSchedulerBundle\Tests\DependencyInjection;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
-use Prokl\TaskSchedulerBundle\DependencyInjection\RewieerTaskSchedulerExtension;
+use Prokl\TaskSchedulerBundle\DependencyInjection\TaskSchedulerExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
@@ -22,7 +22,7 @@ abstract class ContainerAwareTest extends TestCase
     public function loadContainer(array $config = [])
     {
         $container = new ContainerBuilder();
-        $extension = new RewieerTaskSchedulerExtension();
+        $extension = new TaskSchedulerExtension();
         $extension->load($config, $container);
 
         return $container;

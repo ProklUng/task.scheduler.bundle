@@ -6,19 +6,21 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * This is the class that validates and merges configuration from your app/config files.
- *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/configuration.html}
+ * Class Configuration
+ * @package Prokl\TaskSchedulerBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface
 {
+    /**
+     * @inheritDoc
+     */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('rewieer_task_scheduler');
+        $treeBuilder = new TreeBuilder('task_scheduler');
 
         if (false === \method_exists($treeBuilder, 'getRootNode')) {
           // BC layer for symfony/config 4.1 and older
-            $treeBuilder->root('rewieer_task_scheduler');
+            $treeBuilder->root('task_scheduler');
         }
 
         return $treeBuilder;

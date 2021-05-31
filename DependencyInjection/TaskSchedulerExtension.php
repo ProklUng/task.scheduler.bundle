@@ -10,10 +10,10 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
 /**
- * Class RewieerTaskSchedulerExtension
+ * Class TaskSchedulerExtension
  * @package Prokl\TaskSchedulerBundle\DependencyInjection
  */
-final class RewieerTaskSchedulerExtension extends Extension
+final class TaskSchedulerExtension extends Extension
 {
     /**
      * @inheritDoc

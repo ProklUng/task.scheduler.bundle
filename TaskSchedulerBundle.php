@@ -8,10 +8,10 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class RewieerTaskSchedulerBundle
+ * Class TaskSchedulerBundle
  * @package Prokl\TaskSchedulerBundle
  */
-final class RewieerTaskSchedulerBundle extends Bundle
+final class TaskSchedulerBundle extends Bundle
 {
     /**
      * @inheritDoc
