@@ -4,6 +4,7 @@ namespace Prokl\TaskSchedulerBundle;
 
 use Prokl\TaskSchedulerBundle\DependencyInjection\Compiler\EventDispatcherPass;
 use Prokl\TaskSchedulerBundle\DependencyInjection\Compiler\TaskPass;
+use Prokl\TaskSchedulerBundle\DependencyInjection\TaskSchedulerExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -13,6 +14,18 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 final class TaskSchedulerBundle extends Bundle
 {
+    /**
+     * @inheritDoc
+     */
+    public function getContainerExtension()
+    {
+        if ($this->extension === null) {
+            $this->extension = new TaskSchedulerExtension();
+        }
+
+        return $this->extension;
+    }
+
     /**
      * @inheritDoc
      */
